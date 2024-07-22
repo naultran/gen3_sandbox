@@ -1,0 +1,61 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "funding"
+title: funding
+type: object
+category: administrative
+program: '*'
+project: '*'
+description: >
+  description of funding.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties: 
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - type
+  - submitter_id
+
+uniqueKeys:
+  - [id]
+  - [  project_id, submitter_id ]
+
+links:
+  - name: studies
+    backref: fundings
+    label: member_of
+    target_type: study
+    multiplicity: many_to_many
+    required: true
+properties:
+  id: 
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+  type:
+    enum: ["funding"]
+  submitter_id:
+    type: string
+  studies:
+    $ref: "_definitions.yaml#/to_many"
+  support_source:
+    type: string
+  support_id:
+    type: string
+  provenance:
+    type: string
+  state:
+    $ref: "_definitions.yaml#/state"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+
