@@ -51,7 +51,7 @@ properties:
   submitter_id:
     type: string
   specimens:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
   specimen_characteristics:
     $ref: "_definitions.yaml#/to_one"
   date:
