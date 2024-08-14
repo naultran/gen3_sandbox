@@ -1209,6 +1209,7 @@ topography_type:
     - Not collected
     - Not provided
     - Restricted access
+    - Test123456
 
 scoring_system:
   description: ""
@@ -1236,6 +1237,9 @@ study_design:
     - Not collected
     - Not provided
     - Restricted access
+    - response to diet
+    - bioavailibility study
+    - soil charaterization
   description: "A plan specification comprised of protocols (which may specify how
     and what kinds of data will be gathered) that are executed as part of an investigation
     and is realized during a study design execution."
@@ -1295,6 +1299,11 @@ organism:
     - Xenopus laevis
   description: ""
 
+testData: 
+  enum:
+    - test1
+    - test2
+    - test3
 
 sex:
   enum:
@@ -1316,8 +1325,6 @@ strain:
     - Restricted access
     - C57BL/6NCrl
     - C57BL/6J
-    - C57BL/6NCrl_PkmΔDRE
-    - C57BL/6NCrl_WT
     - 129/Sv
     - FVB/N
     - BALB/cJ

@@ -35,6 +35,12 @@ links:
     target_type: aliquot
     multiplicity: many_to_many
     required: true
+  - name: specimen_samples
+    backref: mass_spec_assays
+    label: member_of
+    target_type: specimen_sample
+    multiplicity: many_to_one
+    required: false
 
 properties: 
   type:

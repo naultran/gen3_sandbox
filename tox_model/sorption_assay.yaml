@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "study"
-title: study
+id: "sorption_assay"
+title: sorption_assay
 type: object
 category: administrative
 program: '*'
 project: '*'
 description: >
-  description of study.
+  description of sorption_assay.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,47 +23,24 @@ required:
   - type
   - submitter_id
 
-#  - provenance
-
-
 uniqueKeys: 
   - [ id ]
-  - [project_id, submitter_id]
-
+  - [ project_id, submitter_id]
 
 links: 
-  - name: projects
-    backref: studies
+  - name: specimen_samples
+    backref: sorption_assays
     label: member_of
-    target_type: project
+    target_type: specimen_sample
     multiplicity: many_to_one
     required: true
 
 properties:
-  type:
-    enum: ["study"]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-  submitter_id:
+  information:
     type: string
-  projects:
-    $ref: "_definitions.yaml#/to_one_project"
-  study_title:
-    type: string
-  study_description:
-    type: string
-  study_design:
-    $ref: "_definitions.yaml#/study_design"
-  study_type: 
-    $ref: "_definitions.yaml#/study_type"
-  experimental_setting:
-    $ref: "_definitions.yaml#/experimental_setting"
-  organism:
-    $ref: "_definitions.yaml#/organism"
-  provenance: 
-    type: string
-    description: "template version"
   state:
     $ref: "_definitions.yaml#/state"
   project_id:
@@ -72,8 +49,5 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
-  study_test_article_dtxsid:
-    type: string
-  study_test_article_name:
-    type: string
-
+  project_id:
+    $ref: "_definitions.yaml#/project_id"

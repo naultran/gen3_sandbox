@@ -45,6 +45,12 @@ links:
       target_type: cell_subject
       multiplicity: many_to_one
       required: false
+    - name: specimen_samples
+      backref: treatments
+      label: member_of
+      target_type: specimen_sample
+      multiplicity: many_to_one
+      required: false
 
 properties: 
   type:

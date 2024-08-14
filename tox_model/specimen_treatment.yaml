@@ -1,13 +1,13 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "slide"
-title: slide
+id: "specimen_treatment"
+title: specimen_treatment
 type: object
-category: biospecimen
+category: administrative
 program: '*'
 project: '*'
 description: >
-  description of extraction.
+  description of specimen_treatment.
 additionalProperties: false
 submittable: true
 validators: null
@@ -19,56 +19,47 @@ systemProperties:
   - created_datetime
   - updated_datetime
 
-required:
+required: 
   - type
   - submitter_id
-  
-uniqueKeys:
-  - [id]
-  - [  project_id, submitter_id ]
 
-links:
-  - name: aliquots
-    backref: slides
+uniqueKeys: 
+  - [ id ]
+  - [ project_id, submitter_id]
+
+links: 
+  - name: specimens
+    backref: specimen_treatments
     label: member_of
-    target_type: aliquot
+    target_type: specimen
     multiplicity: many_to_one
     required: true
-  - name: specimen_samples
-    backref: slides
-    label: member_of
-    target_type: specimen_sample
-    multiplicity: many_to_one
-    required: false
 
 properties:
+  type:
+    enum: ["specimen_treatment"]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
-  type:
-    enum: ["slide"]
-  submitter_id:
+  input_amount:
     type: string
-
-  assay:
-    description: General methodology used
+  specimen_test_article_dtxsid:
     type: string
-  probe_type: 
+  specimen_test_article_name:
     type: string
-  probe_name:
+  specimen_vehicle_dtxsid:
     type: string
-  probe_provider:
+  specimen_vehicle_name:
     type: string
-  probe_catalog_number:
+  test_article_label:
     type: string
-  probe_concentration:
+  test_article_source:
     type: string
-  detection_method:
+  test_article_amount:
     type: string
-    
-  aliquots:
-    $ref: "_definitions.yaml#/to_one"
-  provenance:
+  specimen_treatment_date:
+    $ref: "_definitions.yaml#/datetime"
+  provenance: 
     type: string
     description: "template version"
   state:
@@ -79,3 +70,5 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
