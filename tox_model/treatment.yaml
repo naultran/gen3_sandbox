@@ -64,6 +64,8 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   cell_subjects:
     $ref: "_definitions.yaml#/to_one"
+  specimen_samples:
+    $ref: "_definitions.yaml#/to_one"
   date:
     type: string
   administration_volume_ml:

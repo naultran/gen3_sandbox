@@ -91,7 +91,9 @@ properties:
     type: string
     description: "template version"
   aliquots:
-    $ref: "_definitions.yaml#/to_many"    
+    $ref: "_definitions.yaml#/to_many"
+  specimen_samples:
+    $ref: "_definitions.yaml#/to_one"    
 
 #  instrument:
 #    #$ref: "_definitions.yaml#/to_many"

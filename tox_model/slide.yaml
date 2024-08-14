@@ -49,6 +49,8 @@ properties:
     enum: ["slide"]
   submitter_id:
     type: string
+  specimen_samples:
+    $ref: "_definitions.yaml#/to_one"
 
   assay:
     description: General methodology used
