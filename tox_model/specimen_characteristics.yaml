@@ -41,6 +41,8 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
+  type:
+    enum: ["specimen_characteristics"]
   submitter_id:
     type: string
   specimens:

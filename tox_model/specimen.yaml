@@ -43,6 +43,8 @@ properties:
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
+  studies:
+    $ref: "_definitions.yaml#/to_one"
   submitter_id:
     type: string
   specimen_name:

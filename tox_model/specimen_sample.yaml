@@ -45,6 +45,8 @@ links:
       required: false
       
 properties:
+  type:
+    enum: ["specimen_sample"]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
