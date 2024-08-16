@@ -40,18 +40,6 @@ links:
       target_type: subject
       multiplicity: many_to_one
       required: false
-    - name: cell_subjects
-      backref: samples
-      label: member_of
-      target_type: cell_subject
-      multiplicity: many_to_one
-      required: false
-    - name: specimen_treatments
-      backref: samples
-      label: member_of
-      target_type: specimen_treatment
-      multiplicity: many_to_one
-      required: false
 
 properties: 
   type:
