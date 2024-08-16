@@ -72,4 +72,8 @@ properties:
     $ref: "_definitions.yaml#/datetime"
   updated_datetime:
     $ref: "_definitions.yaml#/datetime"
+  study_test_article_dtxsid:
+    type: string
+  study_test_article_name:
+    type: string
 

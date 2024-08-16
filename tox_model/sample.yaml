@@ -40,12 +40,6 @@ links:
       target_type: subject
       multiplicity: many_to_one
       required: false
-    - name: cell_subjects
-      backref: samples
-      label: member_of
-      target_type: cell_subject
-      multiplicity: many_to_one
-      required: false
 
 properties: 
   type:
@@ -58,6 +52,8 @@ properties:
   subjects:
     $ref: "_definitions.yaml#/to_one"
   cell_subjects:
+    $ref: "_definitions.yaml#/to_one"
+  specimen_treatments:
     $ref: "_definitions.yaml#/to_one"
   date:
     type: string

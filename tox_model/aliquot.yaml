@@ -64,6 +64,8 @@ properties:
   RIN:
     type: number
     description: "A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products."
+  date:
+    $ref: "_definitions.yaml#/datetime"
   provenance:
     type: string
     description: "template version"

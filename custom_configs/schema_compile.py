@@ -9,7 +9,7 @@ from dictionaryutils import dump_schemas_from_dir
 import json
 
 #import dictionaryutils
-schema = dump_schemas_from_dir(directory="./tox_model")
+schema = dump_schemas_from_dir(directory="../tox_model")
 schema["_settings.yaml"]["_dict_version"] = "0.1"
 
 with open('./schema.json', 'w') as json_file:
