@@ -1,0 +1,84 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "contact"
+title: contact
+type: object
+category: administrative
+program: '*'
+project: '*'
+description: >
+  description of contact.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties: 
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+required:
+  - type
+  - submitter_id
+  - contact_institution
+  - contact_email
+  - contact_telephone
+#  - provenance
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+links:
+  - name: studies
+    backref: contacts
+    label: member_of
+    target_type: study
+    multiplicity: many_to_many
+    required: true
+
+properties: 
+  type: 
+    enum: ["contact"]
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+  studies:
+    $ref: "_definitions.yaml#/to_many"
+  submitter_id:
+    type: string
+  first_name:
+    type: string
+  middle_name:
+    type: string
+  last_name: 
+    type: string
+
+  contact_orcid:
+    type: string
+  contact_email:
+    type: string
+  contact_telephone:
+    type: string
+  contact_department:
+    type: string
+  contact_institution:
+    type: string
+  location:
+    type: string
+  provenance: 
+    type: string
+    description: "template version"
+  state:
+    $ref: "_definitions.yaml#/state"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+
