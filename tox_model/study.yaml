@@ -61,6 +61,10 @@ properties:
     $ref: "_definitions.yaml#/experimental_setting"
   organism:
     $ref: "_definitions.yaml#/organism"
+  test_article_name: 
+    type: string
+  test_article_dtxsid:
+    type: string
   provenance: 
     type: string
     description: "template version"
