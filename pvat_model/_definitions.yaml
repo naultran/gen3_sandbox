@@ -1514,3 +1514,47 @@ spike_ins:
     - Not collected
     - Not provided
     - Restricted access
+
+cardiovascular_endpoint:
+  enum:
+    - MAP (Mean arterial pressure)
+    - SBP (Systolic blood pressure)
+    - DBP (Diastolic blood pressure)
+    - Heart rate (HR)
+    - Pule pressure (PP)
+    - Heart rate variability (HRV)
+    - Cardiac output (CO)
+    - Stroke volume (SV)
+    - Systemic vascular resistance (SVR)
+    - Left Ventricular Ejection Fraction (LVEF)
+    - Cardiax Index (CI)
+    - End-systolic Volume (ESV)
+    - End-Diastolic Volume (EDV)
+    - Left Ventricular End-Diastolic Pressure (LVEDP)
+    - Aortic Pulse Wave Velocity (PWV)
+    - Central Augmentation Index (AIx)
+    - Ankle-Brachial Index (ABI)
+    - Carotid Intima-Media Thickness (CIMT)
+    - Myocardial Perfusion (MP)
+    - Coronary Flow Reserve (CFR)
+    - QT Interval (Corrected QT Interval, QTc)
+    - Left Atrial Volume Index (LAVI)
+    - Mitral Annular Plane Systolic Excursion (MAPSE)
+    - Global Longitudinal Strain (GLS)
+    - Troponin Levels (hs-Troponin)
+    - Brain Natriuretic Peptide (BNP or NT-proBNP)
+    - C-Reactive Protein (CRP) for inflammation-related endpoints
+    - Endothelial Function (e.g., flow-mediated dilation)
+
+measurement_equipment:
+  enum:
+    - CODA V.... Tail-Cuff Plethysmography ()
+    - TR50B. Biopotential Telemeter (ECG, EEG, EMG) 
+    - TR50BB. Dual Biopotential Telemeter (ECG, EEG and/or EMG)
+    - TRM54P. Pressure Telemeter.
+    - TRM54PB. Pressure Biopotential Telemeter.
+    - TRM54PP. Dual Pressure Telemeter.
+    - TRM56SP. SNA and Pressure Telemeter.
+    - TR57Y. Tissue Oxygen Telemeter.
+    - Not listed
+    - FujiFilm Visualsonics VevoF2

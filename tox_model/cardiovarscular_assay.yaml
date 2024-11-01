@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "cardiovascular_measurement"
-title: Cardiovascular measurements
+id: "cardiovascular_assay"
+title: Cardiovascular assays
 type: object
 namespace: https://toxdatacommons.com
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Weight measurements.
+  description of cardiovascular_assay
 additionalProperties: false
 submittable: true
 validators: null
@@ -35,29 +35,31 @@ links:
   - exclusive: false
     required: true
     subgroup:
-    - name: cardiovarscular_assays
-      backref: cardiovascular_measurements
+    - name: subjects
+      backref: cardiovascular_assays
       label: data_from
-      target_type: cardiovarscular_assay
+      target_type: subject
       multiplicity: many_to_many
       required: false   
-    - name: core_metadata_collections
-      backref: cardiovascular_measurements
-      label: data_from
-      target_type: core_metadata_collection
-      multiplicity: many_to_many
-      required: false
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "weight_measurement" ]
-  data_category:
-    $ref: "_definitions.yaml#/data_category"
-  data_type:
-    $ref: "_definitions.yaml#/data_type"
-  data_format:
-    $ref: "_definitions.yaml#/data_format"
+    enum: [ "cardiovascular_assay" ]
+  cardiovascular_endpoint:
+    $ref: "_definitions.yaml#/cardiovascular_endpoint"
+  measurement_equipment:
+    $ref: "_definitions.yaml#/measurement_equipment"
+  protocol:
+    type: string
+  protocol_doi:
+    type: string
+  measurement_ZT:
+    type: string
+  measurement_date:
+    type: string
+  immobilization_methd:
+    $ref: "_definitions.yaml#/immobilization_methd"
   file_source_repository:
     type: string
   repository_accession_id:
@@ -65,10 +67,6 @@ properties:
   repository_download_ftp:
     type: string
   subjects:
-    $ref: "_definitions.yaml#/to_many"
-  diets:
-    $ref: "_definitions.yaml#/to_many"
-  samples:
     $ref: "_definitions.yaml#/to_many"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
@@ -83,3 +81,4 @@ properties:
   provenance: 
     type: string
     description: "template version" 
+  
