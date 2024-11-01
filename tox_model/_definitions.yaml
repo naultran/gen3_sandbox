@@ -1556,3 +1556,9 @@ measurement_equipment:
     - TR57Y. Tissue Oxygen Telemeter.
     - Not listed
     - FujiFilm Visualsonics VevoF2
+
+immobilization_methd:
+  enum:
+    - Isoflurane
+    - Physical restraint
+    - None 
