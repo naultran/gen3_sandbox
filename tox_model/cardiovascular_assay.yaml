@@ -43,14 +43,9 @@ links:
       required: false   
 
 properties:
-  # $ref: "_definitions.yaml#/data_file_properties"
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
+  $ref: "_definitions.yaml#/data_file_properties"
   type:
     enum: [ "cardiovascular_assay" ]
-  submitter_id:
-    type: string 
   cardiovascular_endpoint:
     $ref: "_definitions.yaml#/cardiovascular_endpoint"
   measurement_equipment:
