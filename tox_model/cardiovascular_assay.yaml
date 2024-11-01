@@ -4,7 +4,7 @@ id: "cardiovascular_assay"
 title: Cardiovascular assays
 type: object
 namespace: https://toxdatacommons.com
-category: data_file
+category: biospecimen
 program: '*'
 project: '*'
 description: >

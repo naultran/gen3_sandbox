@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Weight measurements.
+  Cardiovascular measurements
 additionalProperties: false
 submittable: true
 validators: null
@@ -35,14 +35,14 @@ links:
   - exclusive: false
     required: true
     subgroup:
-    - name: subjects
+    - name: cardiovascular_assays
       backref: cardiovascular_measurements
       label: data_from
-      target_type: subject
+      target_type: cardiovascular_assay
       multiplicity: many_to_many
       required: false   
     - name: core_metadata_collections
-      backref: weight_measurements
+      backref: cardiovascular_measurements
       label: data_from
       target_type: core_metadata_collection
       multiplicity: many_to_many
@@ -51,91 +51,37 @@ links:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "cardiovascular_measurement" ]
+    enum: [ "weight_measurement" ]
   data_category:
     $ref: "_definitions.yaml#/data_category"
   data_type:
     $ref: "_definitions.yaml#/data_type"
   data_format:
     $ref: "_definitions.yaml#/data_format"
-  
-  # Move to new node called cardiovascular_assay This node should connect to cardiovascular_assay. 
-  # It should be cardiovascular_measurement ---> cardiovascular_assay ---> subject
-  # cardiovascular_endpoint:
-  #   enum:
-  #     - MAP (Mean arterial pressure)
-  #     - SBP (Systolic blood pressure)
-  #     - DBP (Diastolic blood pressure)
-  #     - Heart rate (HR)
-  #     - Pule pressure (PP)
-  #     - Heart rate variability (HRV)
-  #     - Cardiac output (CO)
-  #     - Stroke volume (SV)
-  #     - Systemic vascular resistance (SVR)
-  #     - Left Ventricular Ejection Fraction (LVEF)
-  #     - Cardiax Index (CI)
-  #     - End-systolic Volume (ESV)
-  #     - End-Diastolic Volume (EDV)
-  #     - Left Ventricular End-Diastolic Pressure (LVEDP)
-  #     - Aortic Pulse Wave Velocity (PWV)
-  #     - Central Augmentation Index (AIx)
-  #     - Ankle-Brachial Index (ABI)
-  #     - Carotid Intima-Media Thickness (CIMT)
-  #     - Myocardial Perfusion (MP)
-  #     - Coronary Flow Reserve (CFR)
-  #     - QT Interval (Corrected QT Interval, QTc)
-  #     - Left Atrial Volume Index (LAVI)
-  #     - Mitral Annular Plane Systolic Excursion (MAPSE)
-  #     - Global Longitudinal Strain (GLS)
-  #     - Troponin Levels (hs-Troponin)
-  #     - Brain Natriuretic Peptide (BNP or NT-proBNP)
-  #     - C-Reactive Protein (CRP) for inflammation-related endpoints
-  #     - Endothelial Function (e.g., flow-mediated dilation)
-  # measurement_equipment:
-  #   enum:
-  #     - CODA V.... Tail-Cuff Plethysmography ()
-  #     - TR50B. Biopotential Telemeter (ECG, EEG, EMG) 
-  #     - TR50BB. Dual Biopotential Telemeter (ECG, EEG and/or EMG)
-  #     - TRM54P. Pressure Telemeter.
-  #     - TRM54PB. Pressure Biopotential Telemeter.
-  #     - TRM54PP. Dual Pressure Telemeter.
-  #     - TRM56SP. SNA and Pressure Telemeter.
-  #     - TR57Y. Tissue Oxygen Telemeter.
-  #     - Not listed
-  #     - FujiFilm Visualsonics VevoF2 
-  # protocol:
-  #   type: string
-  # protocol_doi:
-  #   type: string
-  # measurement_ZT:
-  #   type: string
-  # measurement_date:
-  #   type: string
-  # immobilization_methd:
-  #   enum:
-  #     - Isoflurane
-  #     - Physical restraint
-  #     - None 
-
-  # # End of move to new node
-  # file_source_repository:
-  #   type: string
-  # repository_accession_id:
-  #   type: string
-  # repository_download_ftp:
-  #   type: string
-  # subjects:
-  #   $ref: "_definitions.yaml#/to_many"
-  # core_metadata_collections:
-  #   $ref: "_definitions.yaml#/to_many"
-  # state:
-  #   $ref: "_definitions.yaml#/state"
-  # project_id:
-  #   $ref: "_definitions.yaml#/project_id"
-  # created_datetime:
-  #   $ref: "_definitions.yaml#/datetime"
-  # updated_datetime:
-  #   $ref: "_definitions.yaml#/datetime"
-  # provenance: 
-  #   type: string
-  #   description: "template version" 
+  file_source_repository:
+    type: string
+  repository_accession_id:
+    type: string
+  repository_download_ftp:
+    type: string
+  subjects:
+    $ref: "_definitions.yaml#/to_many"
+  cardiovascular_assays:
+    $ref: "_definitions.yaml#/to_many"
+  diets:
+    $ref: "_definitions.yaml#/to_many"
+  samples:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_many"
+  state:
+    $ref: "_definitions.yaml#/state"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  provenance: 
+    type: string
+    description: "template version" 
