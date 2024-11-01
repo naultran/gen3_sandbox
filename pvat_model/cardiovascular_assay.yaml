@@ -50,25 +50,9 @@ properties:
     $ref: "_definitions.yaml#/cardiovascular_endpoint"
   measurement_equipment:
     $ref: "_definitions.yaml#/measurement_equipment"
-  protocol:
-    type: string
-  protocol_doi:
-    type: string
-  measurement_ZT:
-    type: string
-  measurement_date:
-    type: string
   immobilization_methd:
     $ref: "_definitions.yaml#/immobilization_methd"
-  file_source_repository:
-    type: string
-  repository_accession_id:
-    type: string
-  repository_download_ftp:
-    type: string
   subjects:
-    $ref: "_definitions.yaml#/to_many"
-  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"
   state:
     $ref: "_definitions.yaml#/state"
@@ -81,4 +65,17 @@ properties:
   provenance: 
     type: string
     description: "template version" 
-  
+  file_source_repository:
+    type: string
+  repository_accession_id:
+    type: string
+  repository_download_ftp:
+    type: string
+  protocol:
+    type: string
+  protocol_doi:
+    type: string
+  measurement_ZT:
+    type: string
+  measurement_date:
+    type: string

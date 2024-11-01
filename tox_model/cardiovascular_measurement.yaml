@@ -8,7 +8,7 @@ category: data_file
 program: '*'
 project: '*'
 description: >
-  Weight measurements.
+  Cardiovascular measurements
 additionalProperties: false
 submittable: true
 validators: null
@@ -35,10 +35,10 @@ links:
   - exclusive: false
     required: true
     subgroup:
-    - name: cardiovarscular_assays
+    - name: cardiovascular_assays
       backref: cardiovascular_measurements
       label: data_from
-      target_type: cardiovarscular_assay
+      target_type: cardiovascular_assay
       multiplicity: many_to_many
       required: false   
     - name: core_metadata_collections
@@ -65,6 +65,8 @@ properties:
   repository_download_ftp:
     type: string
   subjects:
+    $ref: "_definitions.yaml#/to_many"
+  cardiovascular_assays:
     $ref: "_definitions.yaml#/to_many"
   diets:
     $ref: "_definitions.yaml#/to_many"

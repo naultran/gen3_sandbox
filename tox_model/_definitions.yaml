@@ -1557,7 +1557,7 @@ measurement_equipment:
     - Not listed
     - FujiFilm Visualsonics VevoF2
 
-immobilization_methd:
+immobilization_method:
   enum:
     - Isoflurane
     - Physical restraint

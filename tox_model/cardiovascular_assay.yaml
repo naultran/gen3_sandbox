@@ -50,18 +50,10 @@ properties:
     $ref: "_definitions.yaml#/cardiovascular_endpoint"
   measurement_equipment:
     $ref: "_definitions.yaml#/measurement_equipment"
-  immobilization_methd:
-    $ref: "_definitions.yaml#/immobilization_methd"
+  immobilization_method:
+    $ref: "_definitions.yaml#/immobilization_method"
   subjects:
     $ref: "_definitions.yaml#/to_many"
-  state:
-    $ref: "_definitions.yaml#/state"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
   provenance: 
     type: string
     description: "template version" 
@@ -79,3 +71,11 @@ properties:
     type: string
   measurement_date:
     type: string
+  state:
+    $ref: "_definitions.yaml#/state"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
