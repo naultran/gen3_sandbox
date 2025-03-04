@@ -7,8 +7,10 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  Pertaining to a portion of the whole; any one of two or more samples of something, of the same
-  volume or weight.
+  A portion or subset extracted from a larger sample, typically used for analysis. 
+  An aliquot is a representative fraction of the original sample, which may be 
+  used in subsequent experiments or analyses, especially when working with limited 
+  quantities of the original material.
 additionalProperties: false
 submittable: true
 validators: null
@@ -58,12 +60,6 @@ properties:
       - string
   extract_preservation_method:
     $ref: "_definitions.yaml#/extract_preservation_method"
-  a260_a280_ratio:
-    type: number
-    description: "Numeric value that represents the sample ratio of nucleic acid absorbance at 260 nm and 280 nm, used to determine a measure of DNA purity."
-  RIN:
-    type: number
-    description: "A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products."
   provenance:
     type: string
     description: "template version"

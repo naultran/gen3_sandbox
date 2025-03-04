@@ -296,13 +296,11 @@ analyte_type:
     - microRNA
     - Metabolites
     - Protein
-    - Tisse section 
+    - Tissue section 
     - Cell suspension
     - Histology slide
     - Biofluid
-    - Aqueous
-    - Lipophilic
-    - Two-phase
+    - Exosomes
     - Not applicable
     - Missing
     - Not collected
@@ -322,13 +320,13 @@ extract_preservation_method:
     - Restricted access
 feed_paradigm:
   enum: 
+    - ad libitum
+    - restricted
     - Not applicable
     - Missing
     - Not collected
     - Not provided
     - Restricted access
-    - ad libitum
-    - restricte
 data_category:
   term:
     $ref: "_terms.yaml#/data_category"
@@ -1242,31 +1240,14 @@ study_design:
 
 study_type: 
   enum:
+    - Restricted access
+    - Short term
+    - Long term
+    - Hypertension
     - Not applicable
     - Missing
     - Not collected
     - Not provided
-    - Restricted access
-    - Teratology
-    - Short term
-    - Long term
-    - Bacterial mutagenicity
-    - Drosophila germ cell mutagenicity
-    - In vitro micronucleus
-    - In vivo alkaline comet assay
-    - Mammalian cell cytogenetics
-    - Mammalian cell mutagenicity
-    - Micronucleus
-    - Rodent cytogenetics
-    - ADME
-    - Immunotoxicology
-    - Nematode
-    - RACB
-    - Tox21 - Phase II
-    - Toxicogenomics
-    - Toxicokinetics
-    - Zebrafish
-    - Hypertension
   description: "A categorical value specification that specifies the type of study
     from a list of study types"
 
@@ -1279,6 +1260,7 @@ experimental_setting:
     - Restricted access
     - in vivo
     - ex vivo
+    - in vitro
   description: ""
 
 organism:
@@ -1294,8 +1276,9 @@ organism:
     - Drosophila melanogaster
     - Danio rerio
     - Xenopus laevis
-  description: ""
-
+  description: "The species or organism from which the sample was derived. Includes commonly 
+                studied model organisms in biological research, such as humans, mice, rats, 
+                fruit flies, zebrafish, and frogs."
 
 sex:
   enum:
@@ -1310,28 +1293,35 @@ sex:
 
 strain:
   enum: 
-    - Not applicable
+    - 129/Sv
+    - BALB/cJ
+    - BPH (MGI_2667369)
+    - BPH/2J (MGI_2163702)
+    - BPH/2Slg (MGI_2162339)
+    - BPH/5Slg (MGI_7380297)
+    - C3H/HeJ
+    - C57BL/6J
+    - C57BL/6NCrl
+    - C57BL/6NCrl_PkmΔDRE
+    - C57BL/6NCrl_WT
+    - FVB/N
     - Missing
+    - Not applicable
     - Not collected
     - Not provided
     - Restricted access
-    - C57BL/6NCrl
-    - C57BL/6J
-    - C57BL/6NCrl_PkmΔDRE
-    - C57BL/6NCrl_WT
-    - 129/Sv
-    - FVB/N
-    - BALB/cJ
-    - C3H/HeJ
-    - Sprague-Dawley
-    - Dahl SS (Charles Rivers)
-    - Dahl SS (MSU colony)
-  description: ""
+    - SD (RGD_70508)
+    - SS (MSU-RGD_69369)
+    - SS (RGD_69369)
+  description: "The genetic background or strain of the organism used in the 
+                study. This includes commonly used inbred and outbred laboratory 
+                strains of mice and rats, as well as genetically modified variants."
 
 euthanasia_method:
   enum: 
     - Carbon dioxide asphyxiation
     - Cervical dislocation
+    - Isoflurane overdose
     - Not applicable
     - Missing
     - Not collected
@@ -1445,6 +1435,16 @@ instrument_model:
     - Ion Torrent Proton
     - PacBio RS
     - Ion S5 XL System, Ion 530 Chip
+    - Kent Scientific CODA tail-cuff Plethysmographer
+    - AD Instruments TR50B
+    - AD Instruments TR50BB.
+    - AD Instruments TRM54P.
+    - AD Instruments TRM54PB.
+    - AD Instruments TRM54PP.
+    - AD Instruments TRM56SP.
+    - AD Instruments TR57Y. 
+    - FujiFilm Visualsonics VevoF2
+    - Not listed
     - Not applicable
     - Missing
     - Not collected

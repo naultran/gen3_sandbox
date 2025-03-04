@@ -7,7 +7,10 @@ category: biospecimen
 program: '*'
 project: '*'
 description: >
-  description of sample.
+  A biological material collected from the subject for analysis. This 
+  can include whole tissues, blood samples, urine, or other biospecimens. 
+  Samples serve as the source for further processing, analysis, or 
+  aliquot generation.
 additionalProperties: false
 submittable: true
 validators: null
@@ -63,15 +66,60 @@ properties:
     type: string
   biospecimen_anatomic_site:
     $ref: "_definitions.yaml#/biospecimen_anatomic_site"
+  adipose_depot:
+    description: "The specific anatomical location of adipose tissue collection. 
+                  Adipose depots vary in their metabolic and physiological properties, 
+                  influencing research on obesity, metabolism, and disease. 
+                  This field specifies the precise depot from which the sample was obtained."
+    enum:
+      - Abdominal
+      - Axillary
+      - Bone marrow
+      - Carotid
+      - Cervical
+      - Cranial
+      - Dorsolumbular
+      - Epicardial
+      - Epididymal
+      - Facial
+      - Femoral
+      - Gluteal
+      - Gonadal
+      - Inguinal
+      - Intra-muscular
+      - Mammary
+      - Mediastinal
+      - Mesenteric
+      - Omental
+      - Paravertebral
+      - Pericardial
+      - Perirenal
+      - Peritoneal
+      - Pulmonary
+      - Retro-orbital
+      - Retroperitoneal
+      - Subscapular
+      - Supraclavicular
+      - Suprarenal
+      - Suprascapular
+      - Thoracic
+      - Tricep
+      - Upper-body
+      - Uterine
+      - Not applicable
+      - Missing
+      - Not collected
+      - Not provided
+      - Restricted access
+  adipose_vascularization:
+    description:
+    enum:
+      - Perivascular
+      - Non-perivascular
   method_of_sample_procurement:
     $ref: "_definitions.yaml#/method_of_sample_procurement"
-
   preservation_method:
     type: string
-  weight:
-    type: number
-  volume:
-    type: number
   storage_vessel:
     type: string
   collection_protocol: 

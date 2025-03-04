@@ -7,7 +7,10 @@ category: administrative
 program: '*'
 project: '*'
 description: >
-  description of subject.
+  The individual organism from which all associated data, samples, 
+  and measurements are derived. This represents the top-level entity 
+  in the study, such as a specific rat, mouse, or other organism, 
+  and serves as the reference point for all related metadata.
 additionalProperties: false
 submittable: true
 validators: null

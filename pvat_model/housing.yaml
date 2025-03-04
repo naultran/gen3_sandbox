@@ -51,16 +51,28 @@ properties:
     $ref: "_definitions.yaml#/to_many"
   housing_change_date:
     type: string
+    description: "Date at which the housing conditions were changed."
   bedding_type:
     $ref: "_definitions.yaml#/bedding_type"
   cage_type:
     type: string
+    description: "The type of cage used to house the organism, including 
+                  material (e.g., plastic, metal), ventilation type (e.g., 
+                  individually ventilated cages, open cages), and any 
+                  special features (e.g., enrichment, divided sections)."
   vivarium_temperature_C:
     type: number
+    description: "The temperature (in degrees Celsius) maintained in the 
+                  vivarium where the organisms were housed."
   vivarium_humidity_percentage:
     type: number
+    description: "The relative humidity (as a percentage) maintained in 
+                  the vivarium environment."
   vivarium_light_cycle:
     type: string
+    description: "The controlled light-dark cycle used in the vivarium, 
+                  specifying the duration of light and dark periods 
+                  (e.g., 12:12 light-dark cycle, constant darkness)."
   provenance:
     type: string
     description: "template version"

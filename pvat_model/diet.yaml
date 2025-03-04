@@ -47,18 +47,34 @@ properties:
     type: string
   date:
     type: string
+    description: "The data at which the standard or custom diet was provided."
   feed_catalog_number:
     type: string
+    description: "The catalog number assigned by the vendor for the specific feed used in the study."
   housings:
     $ref: "_definitions.yaml#/to_many" 
   feed_description:
     type: string
+    description: "A brief description of the feed used, including formulation, composition, and any special characteristics."
   feed_name:
     type: string
+    description: "The specific name of the feed product used, as designated by the manufacturer or supplier."
   feed_vendor:
     type: string
+    description: "The company or supplier that provided the feed used in the study."
   water_type:
-    type: string
+    enum: 
+      - Aquavive acidified (Innovive)
+      - Aquavive chlorinated (Innovive)
+      - Aquavive ultra-pure (Innovive)
+      - MSU DI water
+      - MSU Tap water
+      - Not applicable
+      - Missing
+      - Not collected
+      - Not provided
+      - Restricted access
+    description: "The type of water provided to the organism."
   feed_paradigm:
     $ref: "_definitions.yaml#/feed_paradigm" 
   provenance:

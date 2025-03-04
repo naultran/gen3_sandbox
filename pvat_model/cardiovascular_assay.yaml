@@ -48,29 +48,34 @@ properties:
     enum: [ "cardiovascular_assay" ]
   cardiovascular_endpoint:
     $ref: "_definitions.yaml#/cardiovascular_endpoint"
-  measurement_equipment:
-    $ref: "_definitions.yaml#/measurement_equipment"
+  instrument_model:
+    $ref: "_definitions.yaml#/instrument_model"
   immobilization_method:
     $ref: "_definitions.yaml#/immobilization_method"
   subjects:
     $ref: "_definitions.yaml#/to_many"
+  measurement_ZT:
+    type: string
+    description: "The Zeitgeber Time (ZT) at which a measurement is taken. This refers 
+                  to the time relative to the light/dark cycle, where ZT 0 is the onset 
+                  of the light phase and ZT 12 is the onset of the dark phase."
+  measurement_date:
+    type: string
+    description: "The date on which the measurement or observation was made during the 
+                  study or experiment."
+  protocol:
+    type: string
+    description: "The standard procedure or set of instructions followed during 
+                  the experiment or study. This may include specific steps, 
+                  conditions, or methods used to collect and analyze data."
+  protocol_doi:
+    type: string
+    description: "The DOI (Digital Object Identifier) associated with the protocol, 
+                  providing a permanent link to the published or publicly available 
+                  version of the experimental protocol."
   provenance: 
     type: string
     description: "template version" 
-  file_source_repository:
-    type: string
-  repository_accession_id:
-    type: string
-  repository_download_ftp:
-    type: string
-  protocol:
-    type: string
-  protocol_doi:
-    type: string
-  measurement_ZT:
-    type: string
-  measurement_date:
-    type: string
   state:
     $ref: "_definitions.yaml#/state"
   project_id:
